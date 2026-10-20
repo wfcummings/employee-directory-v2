@@ -18,8 +18,8 @@ export function getEmployees() {
   return employees;
 }
 
-export function addEmployee(text) {
-  const employee = { id: employees.length + 1, text };
+export function addEmployee(name) {
+  const employee = { id: employees.length + 1, name };
   employees.push(employee);
   return employee;
 }
