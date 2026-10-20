@@ -4,19 +4,19 @@ export default router;
 
 import { getEmployees, getEmployee, getRandomEmployee } from "#db/employees";
 
-router.get("/employees", (req, res) => {
+router.get("/", (req, res) => {
   const employees = getEmployees();
   res.send(employees);
 });
 
 // Note: this middleware has to come first! Otherwise, Express will treat
 // "random" as the argument to the `id` parameter of /employees/:id.
-router.get("/employees/random", (req, res) => {
+router.get("/random", (req, res) => {
   const employee = getRandomEmployee();
   res.send(employee);
 });
 
-router.get("/employees/:id", (req, res) => {
+router.get("/:id", (req, res) => {
   const { id } = req.params;
 
   // req.params are always strings, so we need to convert `id` into a number
