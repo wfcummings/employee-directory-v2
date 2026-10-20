@@ -1,5 +1,10 @@
 import express from "express";
-import { getEmployee, getEmployees, getRandomEmployee } from "#db/employees";
+import {
+  getEmployee,
+  getEmployees,
+  getRandomEmployee,
+  addEmployee,
+} from "#db/employees";
 
 const app = express();
 export default app;
