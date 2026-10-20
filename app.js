@@ -9,6 +9,11 @@ import {
 const app = express();
 export default app;
 
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.originalUrl}`);
+  next();
+});
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
