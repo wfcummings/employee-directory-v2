@@ -18,6 +18,12 @@ export function getEmployees() {
   return employees;
 }
 
+export function addEmployee(text) {
+  const employee = { id: employees.length + 1, text };
+  employees.push(employee);
+  return employee;
+}
+
 export function getEmployee(id) {
   return employees.find((e) => e.id === id);
 }
