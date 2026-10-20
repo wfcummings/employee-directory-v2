@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
 });
 
 import employeesRouter from "#api/employees";
-app.use("/", employeesRouter);
+app.use("/employees", employeesRouter);
 
 app.use((err, req, res, next) => {
   res.status(500).send("Sorry! Something went wrong : (");
